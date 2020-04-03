@@ -39,7 +39,8 @@ if sys.platform[:3] == "win":
 else:
     wxversion = shellstr ("wx-config", "--version")
 
-svnversion = shellstr ("svn", "info", "PtermApp.cpp")
+#svnversion = shellstr ("svn", "info", "PtermApp.cpp")
+svnversion = ""
 if svnversion:
     m = re.search (r"Revision: (\d+)", svnversion)
     if m:
