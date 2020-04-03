@@ -1,0 +1,126 @@
+This file documents the major changes in each release of Pterm.
+
+V5.0.0, April 2014:
+
+Rewrite of the display engine to make zoom 200%, stretch, and full
+screen mode work more consistently.
+
+Copy/Paste text and related operations (such as execute browser) now
+handle Unicode.  All PLATO characters, including accented characters,
+are converted to/from Unicode.
+
+New "Save GSW Audio" feature (in the File menu).  This allows you to
+specify a file name (.WAV, .AIFF, or .AU type) to receive the next GSW
+song.  Recording starts when the music starts, and stops when the
+music is complete.  In other words, this captures one song at a time.
+
+Note to Windows users: the scaling of -font- text has been fixed for
+consistency with other platforms.  If you have code that uses -font-
+with sizes chosen to look right on the previous Windows version of
+pterm, you will need to adjust the text size.  
+
+V5.0.3, April 2014:
+
+-paint- command now supports the case with a tag (fill with character
+pattern).
+
+V5.0.4, June 2014:
+
+This is the release candidate of Pterm V5.0.
+
+It contains bugfixes as well as a new feature: scale with aspect ratio
+preserved (courtesy Dirk Thierbach).
+
+V5.0.5, December 2014:
+
+This is the release of Pterm V5.0.
+
+It contains bugfixes, more general scaling, and Mac Retina display support.
+
+V5.0.6, December 2014:
+
+This release corrects several bugs: crash on exit primarily on Mac,
+wrong handling of -font- commands in certain cases, extra newline in
+autowrap mode.
+
+V5.0.7, March 2015:
+
+Bugfixes: block erase and mishandled Alpha channel in "xor" mode;
+pasting a string with no spaces that requires more than one line wrap;
+erasing text didn't clear it for the copy-text operation.
+
+V5.0.8, September 2016:
+
+Bugfixes: fix block erase in xor mode.  Shift-stop was not recognized
+after returning to Press NEXT to begin, in ASCII mode.  Text for the
+copy/paste buffer was not correctly erased when writing in -mode
+erase-.  Get rid of some extraneous (OS default) menu items on Mac OS.
+Fix conversion of stand-alone tilde for copy/paste to be a standard
+tilde character rather than Unicode "small tilde".
+
+T6.0.0, March 2018 (beta):
+
+Major new capabilities thanks to Dale Sinder.
+
+Added floppy drive emulation, using image files for the data.  Two
+floppy units are supported.
+
+Pterm now supports running microTutor programs, either downloaded from
+the PLATO host, or booted from floppy.  The microprocessor emulation
+has been switched from 8080 to Z80.  Emulation of the "terminal
+resident" is substantially more complete now, and includes terminal
+resident calls that were added after the CERL X-50 report and are
+documented in s0ascers.
+
+The "connection" dialog is now a "new window" dialog, which lets the
+user select a pre-existing profile to use for the new window.  The
+"preferences" dialog is now "edit profiles" and modifies a profile or
+allows the creation of a new one, without affecting the currently open
+windows.  There is also a "session settings" dialog similar to the
+"edit profiles" dialog that allows changing parameters for the
+currently active window.
+
+Profile handling has been cleaned up and made more consistent.  A new
+window is created from a profile, which supplies the initial session
+parameters for that window.  Those may be changed later (via "session
+settings") but that does not affect the profile itself.
+
+Profiles (*.ppf files) are now stored in the application data
+directory rather than in unsuitable spots such as the directory where
+the Pterm application lives.  That directory is OS-dependent:
+
+    Windows:  C:\Documents and Settings\<yourname>\Application Data\Pterm
+    Mac OS:   ~/Library/Application Support/Pterm/
+    Unix:     ~/.Pterm/
+    
+If you have saved profiles you want to carry over, copy them into that
+directory before starting Pterm.  If the profiles directory is empty
+when you start Pterm, it will create two default profiles (which will
+appear in the connection dialog).
+
+T6.0.2, April 2018 (beta):
+
+Bugfixes.
+
+(Re?)Added options for speeding up pastes with 8 spaces or period and
+seven spaces using TAB.
+
+Added experimental bilinear scaling option to display tab.  Only
+applies to non-integer scaled windows.
+
+Added Profile editor option to select starting zoom level.  Not 
+applicable to Session Settings - use view menu.
+
+Keep Window startup location with profile rather than globally.
+Location is saved on closing a window or when 
+View->Save location now is invoked.
+
+Send SHIFT-STOP to both microTUTOR and host when microTUTOR is
+running.
+
+V6.0.4, October 2018 (GA release):
+
+Bugfixes.
+
+Removed "Mail command" preference setting.  Mail is now always
+available, implemented by opening the "mailto:" URL.

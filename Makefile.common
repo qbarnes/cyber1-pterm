@@ -1,0 +1,64 @@
+#--------------------------------------------------------------------------
+#
+#   Copyright (c) 2002, Tom Hunter (see license.txt)
+#
+#   Name: Makefile.common
+#
+#   Description:
+#       Common make stuff
+#
+#--------------------------------------------------------------------------
+
+HOST := $(shell uname)
+MACHINE := $(shell uname -m)
+
+STDLIBS    = -lm
+XLIBS      = -lX11
+THRLIBS    = -lpthread
+MACHINECFLAGS =
+DUAL_HOST_CPUS ?= 0
+ifeq ("$(MACHINE)","x86_64")
+LDFLAGS ?= -g2
+XLIBS      += -L/usr/X11R6/lib64
+DUAL_HOST_CPUS = 1
+else
+LDFLAGS ?= -g2
+XLIBS      += -L/usr/X11R6/lib
+endif
+LDFLAGS += $(EXTRALDFLAGS)
+
+# If dual cpu emulation requested ("make DUAL=yes") then turn that on.
+# If the host has dual CPUs, turn on CPU threads for this.
+# (Note that dual cpu emulation on a single CPU host is a bit silly,
+# though it is sort of legal.)
+ifdef DUAL
+MACHINECFLAGS += -DDUAL_CPU
+ifneq ($(DUAL_HOST_CPUS), 0)
+MACHINECFLAGS += -DCPU_THREADS
+endif
+endif
+
+OPTIMIZE ?= -O2
+CFLAGS  = $(OPTIMIZE) -g2 $(INCL) $(CDEBUG) $(MACHINECFLAGS) $(ARCHCFLAGS) $(EXTRACFLAGS) $(VERSIONCFLAGS) -DHOST_$(HOST) $(PFLAGS)
+MFLAGS  = $(OPTIMIZE) -g2 $(INCL) $(CDEBUG) $(MACHINECFLAGS) $(EXTRACFLAGS) $(VERSIONCFLAGS) -DHOST_$(HOST) $(PFLAGS)
+LDFLAGS += $(PFLAGS) $(ARCHLDFLAGS)
+CONLYFLAGS =  -std=gnu99 -Wall -Werror -Wno-format
+
+SOBJS	= charset.o dtnetsubs.o
+
+%.o : %.c
+	$(CC) $(CFLAGS) $(CONLYFLAGS) -c $<
+
+$(PWD)/%.o : %.c
+	$(CC) $(CFLAGS) $(CONLYFLAGS) -c $<
+
+%.pcf : %.bdf
+	#bdftopcf -o $@ $<
+	touch $@
+
+%.d : %.c
+	/bin/echo -n "$@ " > $@.tmp
+	$(CC) $(INCL) -MM -MG $< >> $@.tmp
+	mv -f $@.tmp $@
+
+#---------------------------  End Of File  --------------------------------

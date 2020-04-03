@@ -1,0 +1,3 @@
+#define WXVERSION "3.0.4"
+#define PTERMBUILDDATE "1 October 2018"
+#define PTERMSVNREV "2386"

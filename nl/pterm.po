@@ -1,0 +1,986 @@
+# Pterm Nederlandse tekst.
+# Copyright (C) 2005 Paul Koning
+# This file is distributed under the same license as the Pterm package.
+# Paul Koning <paul@cyber1.org>, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Pterm V4.1.12\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-01 17:16-0400\n"
+"PO-Revision-Date: 2017-12-09 17:21-0500\n"
+"Last-Translator: Paul Koning <paul@cyber1.org>\n"
+"Language-Team: Nederlands <paul@cyber1.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: Nederlands\n"
+
+#: FrameCanvas.cpp:1290 FrameCanvas.cpp:1760
+msgid "New Terminal Window..."
+msgstr "Nieuw terminalvenster..."
+
+#: FrameCanvas.cpp:1291
+msgid "Connect to a PLATO host"
+msgstr "Aan een PLATO-systeem verbinden"
+
+#: FrameCanvas.cpp:1293
+msgid "Preferences..."
+msgstr "Voorkeuren..."
+
+#: FrameCanvas.cpp:1294 FrameCanvas.cpp:1798
+msgid "Set program configuration"
+msgstr "Stel de voorkeuren van het programma in"
+
+#: FrameCanvas.cpp:1296 FrameCanvas.cpp:1812
+msgid "Exit"
+msgstr "Programma sluiten"
+
+#: FrameCanvas.cpp:1296 FrameCanvas.cpp:1812
+msgid "Quit this program"
+msgstr "Beëindig het programma"
+
+#: FrameCanvas.cpp:1304 FrameCanvas.cpp:1967
+msgid "About Pterm"
+msgstr "Over Pterm"
+
+# msgid "About Pterm"
+# msgstr "Over Pterm"
+#: FrameCanvas.cpp:1304 FrameCanvas.cpp:1967
+msgid "Show about dialog"
+msgstr "Toon programmainformatie"
+
+#: FrameCanvas.cpp:1305 FrameCanvas.cpp:1968
+msgid "Pterm keyboard"
+msgstr "Pterm toetsenbord"
+
+#: FrameCanvas.cpp:1306 FrameCanvas.cpp:1969
+msgid "Show keyboard description"
+msgstr "Toon toetsenbordbeschrijving"
+
+#: FrameCanvas.cpp:1307 FrameCanvas.cpp:1970
+msgid "Pterm help"
+msgstr "Pterm beschrijving"
+
+#: FrameCanvas.cpp:1308 FrameCanvas.cpp:1971
+msgid "Show Pterm help index"
+msgstr "Toon inhoudsopgave van beschrijving"
+
+#: FrameCanvas.cpp:1312 FrameCanvas.cpp:1741
+msgid "File"
+msgstr "Bestand"
+
+#: FrameCanvas.cpp:1313 FrameCanvas.cpp:1744 PtermConnDialog.cpp:70
+#: PtermPrefDialog.cpp:688
+msgid "Help"
+msgstr "Help"
+
+#: FrameCanvas.cpp:1742 PtermConnDialog.cpp:63
+msgid "Edit"
+msgstr "Bewerken"
+
+#: FrameCanvas.cpp:1743
+msgid "View"
+msgstr "Weergave"
+
+#: FrameCanvas.cpp:1761
+msgid "New Terminal Window"
+msgstr "Nieuw terminalvenster"
+
+#: FrameCanvas.cpp:1765
+#, fuzzy
+msgid "Reset MicroTutor"
+msgstr "Naar MicroTutor opstarten"
+
+#: FrameCanvas.cpp:1766
+msgid "Reset the MicroTutor boot process"
+msgstr "MicroTutor boot opnieuw doen"
+
+#: FrameCanvas.cpp:1773
+msgid "Connect Again"
+msgstr "Nogmaals verbinden"
+
+#: FrameCanvas.cpp:1774
+msgid "Connect to the same host"
+msgstr "Verbinden met hetzelfde systeem"
+
+#: FrameCanvas.cpp:1779
+msgid "Save Screen"
+msgstr "Scherm kopiëren"
+
+#: FrameCanvas.cpp:1780
+msgid "Save screen image to file"
+msgstr "Scherm opslaan in"
+
+#: FrameCanvas.cpp:1784
+msgid "Save GSW Audio"
+msgstr "GSW-audio opslaan"
+
+#: FrameCanvas.cpp:1785
+msgid "Save GSW sound to audio file"
+msgstr "GSW geluid opslaan in audiobestand"
+
+#: FrameCanvas.cpp:1789
+msgid "Print..."
+msgstr "Afdrukken..."
+
+#: FrameCanvas.cpp:1790
+msgid "Print screen content"
+msgstr "Afdrukvoorbeeld"
+
+#: FrameCanvas.cpp:1791
+msgid "Page Setup..."
+msgstr "Pagina-instelling..."
+
+#: FrameCanvas.cpp:1792
+msgid "Printout page setup"
+msgstr "Pagina-instelling"
+
+#: FrameCanvas.cpp:1793
+msgid "Print Preview"
+msgstr "Afdrukvoorbeeld"
+
+#: FrameCanvas.cpp:1794
+msgid "Preview screen print"
+msgstr "Bekijk afdrukvoorbeeld"
+
+#: FrameCanvas.cpp:1796
+#, fuzzy
+msgid "Edit Profiles..."
+msgstr "Voorkeurbestanden..."
+
+#: FrameCanvas.cpp:1802 FrameCanvas.cpp:2003 FrameCanvas.cpp:3199
+#, fuzzy
+msgid "Session Settings..."
+msgstr "Verbindingsvoorkeuren..."
+
+#: FrameCanvas.cpp:1803 FrameCanvas.cpp:2004
+msgid "Set the session settings"
+msgstr "Wijzig de voorkeuren van de verbinding"
+
+#: FrameCanvas.cpp:1810 PtermConnFailDialog.cpp:66
+msgid "Close"
+msgstr "Sluiten"
+
+#: FrameCanvas.cpp:1811
+msgid "Close this window"
+msgstr "Sluit dit venster"
+
+#: FrameCanvas.cpp:1820 FrameCanvas.cpp:1979
+msgid "Copy Screen"
+msgstr "Scherm kopiëren"
+
+#: FrameCanvas.cpp:1821 FrameCanvas.cpp:1980
+msgid "Copy screen to clipboard"
+msgstr "Kopiëer scherm naar het klembord"
+
+#: FrameCanvas.cpp:1823 FrameCanvas.cpp:1981
+msgid "Copy text"
+msgstr "Tekst kopiëren"
+
+#: FrameCanvas.cpp:1824 FrameCanvas.cpp:1982
+msgid "Copy text only to clipboard"
+msgstr "Kopiëer tekst naar het klembord"
+
+#: FrameCanvas.cpp:1828 FrameCanvas.cpp:1829 FrameCanvas.cpp:1986
+msgid "Paste plain text"
+msgstr "Voeg gewone tekst in"
+
+#: FrameCanvas.cpp:1830 FrameCanvas.cpp:1987
+msgid "Paste Printout"
+msgstr "Voeg afdruktekst in"
+
+#: FrameCanvas.cpp:1831 FrameCanvas.cpp:1988
+msgid "Paste Cyber printout format"
+msgstr "Voeg tekst in afdrukvorm in"
+
+#: FrameCanvas.cpp:1835 FrameCanvas.cpp:1836 FrameCanvas.cpp:1991
+#: FrameCanvas.cpp:1992
+msgid "Execute URL"
+msgstr "Webverwijzing volgen"
+
+#: FrameCanvas.cpp:1838 FrameCanvas.cpp:1839 FrameCanvas.cpp:1993
+#: FrameCanvas.cpp:1994
+msgid "Mail to..."
+msgstr "E-mail sturen naar..."
+
+#: FrameCanvas.cpp:1841 FrameCanvas.cpp:1842 FrameCanvas.cpp:1995
+#: FrameCanvas.cpp:1997
+msgid "Search this..."
+msgstr "Zoek naar..."
+
+#: FrameCanvas.cpp:1892
+msgid "Display menu bar"
+msgstr "Verbindingstoestandbalk tonen"
+
+#: FrameCanvas.cpp:1898 FrameCanvas.cpp:1899
+msgid "Display status bar"
+msgstr "Verbindingstoestandbalk tonen"
+
+#: FrameCanvas.cpp:1905
+msgid "Save location now"
+msgstr "Venstercoördinaten nu opslaan"
+
+#: FrameCanvas.cpp:1906
+msgid "Save location on close"
+msgstr "Venstercoördinaten opslaan bij sluiten"
+
+#: FrameCanvas.cpp:1907
+msgid "Save window location now"
+msgstr "Venstercoördinaten nu upslaan"
+
+#: FrameCanvas.cpp:1908
+msgid "Save window location on close"
+msgstr "Venstercoördinaten opslaan bij sluiten"
+
+#: FrameCanvas.cpp:1911
+#, fuzzy
+msgid "Restore Location"
+msgstr "Venstercoördinaten herstellen"
+
+#: FrameCanvas.cpp:1912
+msgid "Restore window location"
+msgstr "Venstercoördinaten herstellen"
+
+#: FrameCanvas.cpp:1920
+#, c-format
+msgid "Zoom display %1.1fx"
+msgstr "Beeld %1.1f maal vergroten"
+
+#: FrameCanvas.cpp:1925
+#, c-format
+msgid "Zoom display %1.0fx"
+msgstr "Beeld %1.0f maal vergroten"
+
+#: FrameCanvas.cpp:1943
+msgid "Stretch display"
+msgstr "Beeld rekken"
+
+#: FrameCanvas.cpp:1949
+msgid "Keep aspect ratio"
+msgstr "Aspectverhouding bewaren"
+
+#: FrameCanvas.cpp:1955
+msgid "Full Screen"
+msgstr "Schermvullend"
+
+#: FrameCanvas.cpp:1957
+msgid "Display in full screen mode"
+msgstr "Schermvullende weergave"
+
+#: FrameCanvas.cpp:1985
+msgid "Paste ASCII"
+msgstr "Voer tekst in"
+
+#: FrameCanvas.cpp:2073 FrameCanvas.cpp:3184
+msgid " Booted from floppy"
+msgstr "Vanaf floppy opgestart"
+
+#: FrameCanvas.cpp:2078 FrameCanvas.cpp:2294
+msgid " Not connected"
+msgstr "Niet verbonden"
+
+#: FrameCanvas.cpp:2082
+msgid " Connecting..."
+msgstr "Aan het verbinden..."
+
+#: FrameCanvas.cpp:2303
+#, c-format
+msgid "Connection failed @ %s on "
+msgstr "Verbinding mislukt om %s op "
+
+#: FrameCanvas.cpp:2308
+#, c-format
+msgid "Dropped connection @ %s on "
+msgstr "Verbinding verloren om %s op "
+
+#: FrameCanvas.cpp:2313
+#, c-format
+msgid "%s on "
+msgstr "%s naar "
+
+#: FrameCanvas.cpp:2706
+msgid "Can't copy image to the clipboard"
+msgstr "Kopiëren van het scherm naar het klembord mislukt."
+
+#: FrameCanvas.cpp:2712 FrameCanvas.cpp:2845 FrameCanvas.cpp:3007
+msgid "Can't open clipboard."
+msgstr "Openen van klembord mislukt."
+
+#: FrameCanvas.cpp:2852
+msgid "Can't copy text to the clipboard"
+msgstr "Kopiëren van tekst naar het klembord mislukt"
+
+#: FrameCanvas.cpp:3014
+msgid "No text data on clipboard"
+msgstr "Het klembord bevat geen tekst"
+
+#: FrameCanvas.cpp:3024
+msgid "Can't paste data from the clipboard"
+msgstr "Ophalen van gegevens van klembord mislukt"
+
+#: FrameCanvas.cpp:3063
+msgid "Save screen to"
+msgstr "Scherm opslaan in"
+
+#: FrameCanvas.cpp:3135
+msgid "Save GSW audio to"
+msgstr "GSW-audio opslaan in"
+
+#: FrameCanvas.cpp:3288
+msgid ""
+"There was a problem printing.\n"
+"Perhaps your current printer is not set correctly?"
+msgstr ""
+"Er was een probleem bij het afdrukken.\n"
+"Misschien is uw printer niet juist geinstalleerd?"
+
+#: FrameCanvas.cpp:3289
+msgid "Printing"
+msgstr "Afdrukken"
+
+#: FrameCanvas.cpp:3311
+msgid ""
+"There was a problem previewing.\n"
+"Perhaps your current printer is not set correctly?"
+msgstr ""
+"Er was een probleem bij het maken van het afdrukvoorbeeld.\n"
+"Misschien is uw printer niet juist geinstalleerd?"
+
+#: FrameCanvas.cpp:3312
+msgid "Previewing"
+msgstr "Voorbeeld bekijken"
+
+#: FrameCanvas.cpp:3317
+msgid "Pterm Print Preview"
+msgstr "Pterm Afdrukvoorbeeld"
+
+#: FrameCanvas.cpp:6581
+#, fuzzy
+msgid "ASCII"
+msgstr "Voer tekst in"
+
+#: FrameCanvas.cpp:6585
+msgid "Classic"
+msgstr "Klassiek"
+
+#: FrameCanvas.cpp:6599
+#, fuzzy
+msgid " Trace | "
+msgstr " Traceren | "
+
+#: FrameCanvas.cpp:6614
+#, fuzzy
+msgid " PLATO keyboard | "
+msgstr " PLATO toetsenbord | "
+
+#: FrameCanvas.cpp:7127
+msgid " Program ended"
+msgstr "Programma is geëindigd"
+
+#: PtermApp.cpp:120
+msgid "Error creating application data directory "
+msgstr "Probleem bij aanmaken van de programma-informatiefolder"
+
+#: PtermApp.cpp:363
+msgid "Open a new terminal window"
+msgstr "Nieuw terminalvenster openmaken"
+
+#: PtermApp.cpp:411 PtermConnDialog.cpp:151
+#, fuzzy
+msgid "Profile Editor"
+msgstr "Voorkeurbestand"
+
+#: PtermApp.cpp:427 PtermApp.cpp:432
+#, fuzzy
+msgid "PLATO terminal emulator."
+msgstr "PLATO terminal-emulator."
+
+#: PtermConnDialog.cpp:41
+#, fuzzy
+msgid "Select a profile and click Connect or Boot."
+msgstr "Kies een voorkeurbestand en klik op Verbinden."
+
+#: PtermConnDialog.cpp:75 PtermPrefDialog.cpp:699
+msgid "Cancel"
+msgstr "Annuleer"
+
+#: PtermConnDialog.cpp:79 PtermConnDialog.cpp:240
+msgid "Connect"
+msgstr "Verbinden"
+
+#: PtermConnDialog.cpp:216 PtermPrefDialog.cpp:1322
+#, c-format
+msgid ""
+"Profile '%s' not found. Problem loading file:\n"
+"\n"
+"    %s"
+msgstr ""
+"Voorkeur '%s' niet gevonden.  Probleem bij lezen van bestand:\n"
+"\n"
+"    %s"
+
+#: PtermConnDialog.cpp:220 PtermPrefDialog.cpp:898 PtermPrefDialog.cpp:919
+#: PtermPrefDialog.cpp:945 PtermPrefDialog.cpp:1242 PtermPrefDialog.cpp:1324
+msgid "Error"
+msgstr "Fout"
+
+#: PtermConnFailDialog.cpp:57
+msgid "New Connection"
+msgstr "Nieuwe verbinding"
+
+#: PtermConnFailDialog.cpp:61
+#, fuzzy
+msgid "Reconnect"
+msgstr "Verbinden"
+
+#: PtermConnFailDialog.cpp:76
+msgid ""
+"Your connection to the host was lost.\n"
+"\n"
+msgstr ""
+"De verbinding naar het systeem was verbroken.\n"
+"\n"
+
+#: PtermConnFailDialog.cpp:80
+#, fuzzy
+msgid ""
+"The hostname is unknown or invalid.\n"
+"\n"
+msgstr "De systeemnaam is onbekend of ongeldig\n"
+
+#: PtermConnFailDialog.cpp:84
+#, fuzzy
+msgid ""
+"The host is not reachable.\n"
+"\n"
+msgstr "Het systeem is niet bereikbaar\n"
+
+#: PtermConnFailDialog.cpp:87
+msgid ""
+"You may open a new connection, reconnect\n"
+"to the same host/port, or close the window."
+msgstr ""
+"U kunt een nieuwe verbinding openmaken, opnieuw\n"
+"verbinden naar hetzelfde systeem en poort, of\n"
+"het venster sluiten."
+
+#: PtermConnFailDialog.cpp:90
+#, c-format
+msgid ""
+"\n"
+"Failed: %s:%ld"
+msgstr ""
+"\n"
+"Mislukt: %s:%ld"
+
+#: PtermConnFailDialog.cpp:91
+msgid ""
+"\n"
+"\n"
+"For more information, see: "
+msgstr ""
+"\n"
+"\n"
+"Voor verdere informatie, zie:"
+
+#: PtermConnection.cpp:611
+#, fuzzy, c-format
+msgid "Connecting to %d.%d.%d.%d"
+msgstr "Aan het verbinden met %d.%d.%d.%d"
+
+#: PtermPrefDialog.cpp:139
+msgid "Use this page to manage your connection preference profiles."
+msgstr "Gebruik deze bladzijde om voorkeurbestanden te bewerken"
+
+#: PtermPrefDialog.cpp:151
+msgid "Select a profile above, then click a button below."
+msgstr "Kies een voorkeurbestand, en klik dan op een button hieronder"
+
+#: PtermPrefDialog.cpp:159
+msgid "Load"
+msgstr "Laden"
+
+#: PtermPrefDialog.cpp:163
+msgid "Delete"
+msgstr "Uitwissen"
+
+#: PtermPrefDialog.cpp:177
+#, fuzzy
+msgid "Or, enter the name of a new profile below and click Save As."
+msgstr "Of voeg de naam van een nieuw voorkeurbestand in en klik op Toevoegen"
+
+#: PtermPrefDialog.cpp:187
+msgid "Profile"
+msgstr "Voorkeurbestand"
+
+#: PtermPrefDialog.cpp:194
+#, fuzzy
+msgid "Save As"
+msgstr "Opslaan"
+
+#: PtermPrefDialog.cpp:204
+msgid "Profiles"
+msgstr "Voorkeurbestanden"
+
+#: PtermPrefDialog.cpp:218
+msgid "Settings on this page specify where PLATO is on the internet."
+msgstr "Op deze pagina geeft U aan waar PLATO zich bevindt op het internet."
+
+#: PtermPrefDialog.cpp:229
+msgid "Run this first"
+msgstr "Dit programma eerst uitvoeren"
+
+#: PtermPrefDialog.cpp:239
+msgid "Default Host"
+msgstr "Standaardsysteem"
+
+#: PtermPrefDialog.cpp:248
+msgid "Default Port*"
+msgstr "Standardpoortnummer*"
+
+#: PtermPrefDialog.cpp:264
+msgid "* NOTE: 5004=Classic, 8005=Color Terminal"
+msgstr "* 5004=Klassiek, 8005=Kleur-terminal"
+
+# msgid "New Connection...\tCtrl-N"
+# msgstr "Nieuwe verbinding...\tCtrl-N"
+#: PtermPrefDialog.cpp:271
+msgid "Connection"
+msgstr "Verbinding"
+
+#: PtermPrefDialog.cpp:283
+msgid "Settings on this page configure the text shown in the window title."
+msgstr "Op deze pagina stelt U in wat op de titelbalk staat."
+
+#: PtermPrefDialog.cpp:288
+msgid "Show name/group in frame title"
+msgstr "Toon naam/groep op de titelbalk"
+
+#: PtermPrefDialog.cpp:293
+msgid "Show system name in frame title"
+msgstr "Toon systeemnaam op de titelbalk"
+
+#: PtermPrefDialog.cpp:298
+msgid "Show host name in frame title"
+msgstr "Toon internet host-naam op de titelbalk"
+
+#: PtermPrefDialog.cpp:303
+msgid "Show site-station numbers in frame title"
+msgstr "Toon stationsnummer op de titelbalk"
+
+#: PtermPrefDialog.cpp:310
+msgid "Enable control-key menu accelerators"
+msgstr "Zet de control-toets aan"
+
+#: PtermPrefDialog.cpp:322
+msgid "Title"
+msgstr "Titel"
+
+#: PtermPrefDialog.cpp:333
+msgid "Settings on this page let you fine-tune your PLATO experience."
+msgstr "Op deze pagine stelt U in hoe PLATO vertoond wordt."
+
+#: PtermPrefDialog.cpp:338
+msgid "Simulate 1260 baud"
+msgstr "1260 Baud simuleren"
+
+#: PtermPrefDialog.cpp:342
+msgid "Enable GSW (not in ASCII)"
+msgstr "GSW muziekdoos aanzetten (niet in kleur-terminal)"
+
+#: PtermPrefDialog.cpp:347
+msgid "Enable numeric keypad for arrow operation"
+msgstr "Numeriek toetsenbord voor pijlen"
+
+#: PtermPrefDialog.cpp:352
+msgid "Ignore CAPS LOCK"
+msgstr "Hoofdlettertoets negeren"
+
+#: PtermPrefDialog.cpp:357
+msgid "Use real PLATO keyboard"
+msgstr "Gebruik een echt PLATO toetsenbord"
+
+#: PtermPrefDialog.cpp:361
+msgid "Enable -beep-"
+msgstr "-beep-commando aanzetten"
+
+#: PtermPrefDialog.cpp:366
+msgid "Disable Shift-Space (backspace via Ctrl-Space)"
+msgstr "Shift-spatie uitzetten (spatie-terug via Ctrl-spatie)"
+
+#: PtermPrefDialog.cpp:371
+msgid "Disable mouse drag (select)"
+msgstr "Set selecteren met de muis uit"
+
+#: PtermPrefDialog.cpp:378
+msgid "Emulation"
+msgstr "Emulatie-instellingen"
+
+#: PtermPrefDialog.cpp:392
+msgid "Settings on this page allow you to change the display appearance."
+msgstr "Op deze bladzijde geeft U aan hoe het scherm eruit ziet."
+
+#: PtermPrefDialog.cpp:399
+msgid "Disable -color- (ASCII mode)"
+msgstr "-color-commando uitzetten"
+
+#: PtermPrefDialog.cpp:410 PtermPrefDialog.cpp:427
+msgid "Foreground color*"
+msgstr "Voorgrondkleur*"
+
+#: PtermPrefDialog.cpp:417 PtermPrefDialog.cpp:434
+msgid "Background color*"
+msgstr "Achtergrondkleur*"
+
+#: PtermPrefDialog.cpp:444
+msgid "Use BILINEAR scaling"
+msgstr ""
+
+#: PtermPrefDialog.cpp:470
+msgid "Show Menu Bar"
+msgstr ""
+
+#: PtermPrefDialog.cpp:476
+msgid "Show Status Bar"
+msgstr ""
+
+#: PtermPrefDialog.cpp:484
+#, fuzzy
+msgid "* Applied in Classic mode or if -color- is disabled in ASCII mode"
+msgstr ""
+"* Dit wordt gebruikt in een klassieke terminal of als -color- uitgezet is"
+
+#: PtermPrefDialog.cpp:491
+msgid "Display"
+msgstr "Scherminstellingen"
+
+#: PtermPrefDialog.cpp:508
+msgid "Settings on this page allow you to specify Paste options."
+msgstr "Op deze pagina geeft U aan hoe tekst van het klembord wordt ingevoerd."
+
+#: PtermPrefDialog.cpp:522
+msgid "Delay between chars"
+msgstr "Pauze tussen karakters"
+
+#: PtermPrefDialog.cpp:530 PtermPrefDialog.cpp:542
+msgid "milliseconds"
+msgstr "miliseconden"
+
+#: PtermPrefDialog.cpp:534
+msgid "Delay after end of line"
+msgstr "Pauze aan het eind van de regel"
+
+#: PtermPrefDialog.cpp:550
+msgid "Automatic new line every"
+msgstr "Automatische nieuwe regel na iedere"
+
+#: PtermPrefDialog.cpp:562
+msgid "characters"
+msgstr "karakters"
+
+#: PtermPrefDialog.cpp:567
+msgid "Use TUTOR pasting (certain sequences are treated specially)"
+msgstr ""
+"Gebruik TUTOR invoegregels (sommige letterpatronen worden anders behandeld)"
+
+#: PtermPrefDialog.cpp:572
+#, fuzzy
+msgid "Convert periods followed by 7 spaces into period/tab"
+msgstr "Vervang punt en 7 spaties door punt en tabulatie*"
+
+#: PtermPrefDialog.cpp:577
+msgid "Convert 8 consecutive spaces into a tab"
+msgstr "Vervang 8 spaties door tabulatie"
+
+#: PtermPrefDialog.cpp:582
+msgid "Display TUTOR colorization options on Edit/Context menus"
+msgstr "TUTOR kleurkeuzen tonen op Bewerken en Context-menu"
+
+#: PtermPrefDialog.cpp:587
+msgid "Trim spaces from end of copied text"
+msgstr ""
+
+#: PtermPrefDialog.cpp:595
+msgid "Pasting"
+msgstr "Afdrukken"
+
+#: PtermPrefDialog.cpp:609
+msgid "Specify URL for menu option 'Search this...'"
+msgstr "Kies de webverwijzing gebruikt voor 'Zoek naar...'"
+
+#: PtermPrefDialog.cpp:620
+#, fuzzy
+msgid "MicroTutor related options:"
+msgstr "MicroTutor niveau 2 wijzigingen aanzetten"
+
+#: PtermPrefDialog.cpp:628
+msgid "Boot to MicroTutor"
+msgstr "Naar MicroTutor opstarten"
+
+#: PtermPrefDialog.cpp:635
+msgid "Enable Floppy 0"
+msgstr "Floppy no. 0 aanzetten"
+
+#: PtermPrefDialog.cpp:641
+msgid "Enable Floppy 1"
+msgstr "Floppy no. 1 aanzetten"
+
+#: PtermPrefDialog.cpp:648
+#, fuzzy
+msgid "Floppy 0 file:"
+msgstr "Bestand voor floppy no. 0:"
+
+#: PtermPrefDialog.cpp:656
+#, fuzzy
+msgid "Select Floppy 0 File"
+msgstr "Floppy no. 0 bestand openmaken"
+
+#: PtermPrefDialog.cpp:661
+#, fuzzy
+msgid "Floppy 1 file:"
+msgstr "Bestand voor floppy no. 1:"
+
+#: PtermPrefDialog.cpp:669
+#, fuzzy
+msgid "Select Floppy 1 File"
+msgstr "Floppy no. 1 bestand openmaken"
+
+#: PtermPrefDialog.cpp:675
+msgid "Local"
+msgstr "Plaatselijk"
+
+#: PtermPrefDialog.cpp:694
+msgid "Save"
+msgstr "Opslaan"
+
+#: PtermPrefDialog.cpp:694
+msgid "Apply"
+msgstr "Toepassen"
+
+#: PtermPrefDialog.cpp:703
+msgid "Defaults"
+msgstr "Standaard"
+
+#: PtermPrefDialog.cpp:745
+#, fuzzy
+msgid "Profile editor"
+msgstr "Voorkeurbestand"
+
+#: PtermPrefDialog.cpp:747
+#, fuzzy
+msgid "Session settings"
+msgstr "Aan het verbinden..."
+
+#: PtermPrefDialog.cpp:883
+msgid "Profile saved."
+msgstr "Programmavoorkeur opgeslagen."
+
+#: PtermPrefDialog.cpp:896
+#, c-format
+msgid "Unable to save profile: %s"
+msgstr "Voorkeur kan niet opgeslagen worden: %s"
+
+#: PtermPrefDialog.cpp:913 PtermPrefDialog.cpp:1233
+msgid "Profile loaded."
+msgstr "Voorkeurbestand geladen."
+
+#: PtermPrefDialog.cpp:918 PtermPrefDialog.cpp:1240
+#, c-format
+msgid "Unable to load profile: %s"
+msgstr "Voorkeur kan niet geladen worden: %s"
+
+#: PtermPrefDialog.cpp:927
+#, c-format
+msgid "Do you really want to delete profile '%s' ?"
+msgstr "Wilt U zeker voorkeur '%s' verwijderen?"
+
+#: PtermPrefDialog.cpp:928
+msgid "Confirm"
+msgstr "Bevestig"
+
+#: PtermPrefDialog.cpp:934
+msgid "Profile deleted."
+msgstr "Voorkeurbestand verwijderd."
+
+#: PtermPrefDialog.cpp:943
+#, c-format
+msgid "Unable to delete profile: %s"
+msgstr "Probleem bij verwijdering van voorkeur: %s"
+
+#: PtermPrefDialog.cpp:958
+#, fuzzy, c-format
+msgid "Profile %s already exists"
+msgstr "Programmavoorkeur opgeslagen."
+
+#: PtermPrefDialog.cpp:959 PtermPrefDialog.cpp:981
+msgid "Problem"
+msgstr "Probleem"
+
+#: PtermPrefDialog.cpp:972
+msgid "Profile added."
+msgstr "Voorkeurbestand toegevoegd."
+
+#: PtermPrefDialog.cpp:977
+msgid ""
+"The profile name you entered contains illegal characters.\n"
+"\n"
+"Valid characters are:\n"
+"\n"
+"Standard: a-z, A-Z, 0-9\n"
+"Special:  parentheses, dash, underscore, period, and space"
+msgstr ""
+"De ingevoerde voorkeurbestandnaam heeft ongeldige karakters.\n"
+"\n"
+"Toegestaan zijn:\n"
+"\n"
+"Standaard: a-z, A-Z, 0-9\n"
+"Speciaal:  haken, minteken, onderstreping, punt, en spatie"
+
+#: PtermPrefDialog.cpp:987
+msgid "Open Floppy 0 file"
+msgstr "Floppy no. 0 bestand openmaken"
+
+#: PtermPrefDialog.cpp:1012
+msgid "Open Floppy 1 file"
+msgstr "Floppy no. 1 bestand openmaken"
+
+#: PtermPrefDialog.cpp:1035
+msgid "Foreground"
+msgstr "Voorgrond"
+
+#: PtermPrefDialog.cpp:1046
+msgid "Background"
+msgstr "Achtergrond"
+
+#: PtermPrintout.h:22
+msgid "Pterm printout"
+msgstr "Pterm afdruk"
+
+#: MTFile.cpp:107
+#, fuzzy
+msgid "Error opening \\u00b5Tutor floppy file "
+msgstr "Floppybestand kan niet geopend worden"
+
+#~ msgid "Command line for menu option 'Mail to...' (%s=address)"
+#~ msgstr "Commando voor 'E-mail sturen naar...' (%s=adres)"
+
+#~ msgid "Keyboard Help"
+#~ msgstr "Toetsenbordbeschrijving"
+
+#~ msgid ""
+#~ "The host did not respond to the connection request.\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Het systeem antwoordt niet op het verbindingsverzoek. \n"
+#~ "\n"
+
+#~ msgid "Add"
+#~ msgstr "Toevoegen"
+
+#~ msgid "V"
+#~ msgstr "V"
+
+#~ msgid "Open the same Profile"
+#~ msgstr "Hetzelfde voorkeurbestand openmaken"
+
+#~ msgid "Pterm Preferences"
+#~ msgstr "Pterm voorkeuren"
+
+#~ msgid "None"
+#~ msgstr "Geen"
+
+#~ msgid "2"
+#~ msgstr "2"
+
+#~ msgid "3"
+#~ msgstr "3"
+
+#~ msgid "4"
+#~ msgstr "4"
+
+#~ msgid "Connect at startup"
+#~ msgstr "Automatisch verbinden"
+
+#~ msgid "OK"
+#~ msgstr "OK"
+
+#~ msgid "Or, enter a hostname and port number, then click Connect."
+#~ msgstr "Of voer een systeemnaam en poortnummer in en klik op Verbinden."
+
+#~ msgid "Host name"
+#~ msgstr "Systeemnaam"
+
+#~ msgid "Port*"
+#~ msgstr "Poortnummer*"
+
+#~ msgid "Connect to PLATO"
+#~ msgstr "Met PLATO verbinden"
+
+#~ msgid "New Connection..."
+#~ msgstr "Nieuwe verbinding..."
+
+#~ msgid "Display full screen"
+#~ msgstr "Schermvullende weergave"
+
+#~ msgid "Can't open clipboard to execute."
+#~ msgstr "Openen van klembord mislukt."
+
+#~ msgid "No text data on clipboard to execute"
+#~ msgstr "Het klembord bevat geen tekst om uit te voeren"
+
+#~ msgid "Can't paste data from the clipboard to execute"
+#~ msgstr "Ophalen van gegevens van klembord mislukt"
+
+#~ msgid "Can't open clipboard to save email address"
+#~ msgstr "Openen van klembord om email-adres te halen mislukt."
+
+#~ msgid "No text data on clipboard for email address"
+#~ msgstr "Het klembord bevat geen tekst voor email-adres"
+
+#~ msgid "Can't get email address data from the clipboard"
+#~ msgstr "Ophalen van email-adres van klembord mislukt"
+
+#~ msgid "Can't open clipboard to save search key"
+#~ msgstr "Openen van klembord voor zoektekst mislukt."
+
+#~ msgid "No text data on clipboard for search"
+#~ msgstr "Het klembord bevat geen zoektekst"
+
+#~ msgid "Can't get search key data from the clipboard"
+#~ msgstr "Ophalen van zoektekst van klembord mislukt"
+
+#~ msgid "Can't open clipboard to save text"
+#~ msgstr "Openen van klembord om tekst te bewaren mislukt."
+
+#~ msgid "No text data on clipboard for spell check"
+#~ msgstr "Het klembord bevat geen tekst voor spelcontrole"
+
+#~ msgid "Can't paste text from the clipboard"
+#~ msgstr "Ophalen van tekst van klembord mislukt"
+
+#~ msgid "Allow words to be split across lines"
+#~ msgstr "Woorden mogen over twee regels gebroken worden"
+
+#~ msgid "* NOTE: Conversions are applied at 8-character intervals."
+#~ msgstr "* Deze vervangingen worden om de 8 karakters gedaan."
+
+#~ msgid "Specify browser to use for menu option 'Execute URL'"
+#~ msgstr "Kies de browser die voor 'Webverwijzing volgen' gebruikt wordt"
+
+#~ msgid "Retry"
+#~ msgstr "Nogmaals proberen"
+
+#~ msgid ""
+#~ "Your connection to the host was lost.  You may open a\n"
+#~ "new connection, try this connection again, or exit."
+#~ msgstr ""
+#~ "De verbinding met het systeem werd afgesloten.  U kunt\n"
+#~ "een nieuwe verbinding maken, nogmaals proberen, of het\n"
+#~ "programma sluiten."
+
+#~ msgid "Connected to %d.%d.%d.%d"
+#~ msgstr "Verbonden met %d.%d.%d.%d"
+
+#~ msgid " Retrying..."
+#~ msgstr "Nogmaals proberen..."
