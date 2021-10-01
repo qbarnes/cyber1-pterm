@@ -15,6 +15,8 @@
 #include "PtermConnFailDialog.h"
 #include "PtermPrefDialog.h"
 
+#include <map>
+
 /*
 The key of the Pterm V5 design is that it just uses a 512x512 bitmap with
 raw pixel access to construct most of the screen content, then it displays
@@ -3498,6 +3500,71 @@ void PtermFrame::fixAlpha (void)
 }
 #endif
 
+// Empire ships and other things drawing information:
+// Values below are hex. Right facing, then clockwise, then single torp, then burst
+// Romulan:    3: 32, 33, 36, 37, 38, 39, 3A, 12, 27, 29, 2A, 2B, 2D, 2E, 2F, 31; 2: 21, 26
+// Klingon:    3:  5,  6,  7,  8,  9,  A,  B,  C,  D,  E,  F, 10,  1,  2,  3,  4; 2: 1C, 35
+// Federation: 2:  5,  6,  7,  8,  9,  A,  B,  C,  D,  E,  F, 10,  1,  2,  3,  4; 3: 23; 2: 34
+// Orion:      2: 32, 33, 2F, 31, 2D, 2E, 2A, 2B, 27, 29, 3A, 12, 38, 39, 36, 37; 2: 20, 30
+//
+// Circle: 3: 1B, 1C, 1D, 1E, 1F, 20, 21, 22
+// Dead Planet: 3: 16, 17
+// Class M: 3: 14, 15
+// Sun: 3: 11, 13
+// Tiny Dead: 2: 1B
+// Tiny Class M: 2: 1A
+// Tiny Sun: 2: 11
+enum char_type {romulan, klingon, federation, orion, circle, dead, classm, sun};
+
+template<typename T>
+int char_key(T part1, T part2)
+{
+    return part1 + (part2 << 2);
+}
+
+static const std::map<int, char_type> char_map = {
+    {char_key(3, 0x32), char_type::romulan}, {char_key(3, 0x33), char_type::romulan},
+    {char_key(3, 0x36), char_type::romulan}, {char_key(3, 0x37), char_type::romulan},
+    {char_key(3, 0x38), char_type::romulan}, {char_key(3, 0x39), char_type::romulan},
+    {char_key(3, 0x3A), char_type::romulan}, {char_key(3, 0x12), char_type::romulan},
+    {char_key(3, 0x27), char_type::romulan}, {char_key(3, 0x29), char_type::romulan},
+    {char_key(3, 0x2A), char_type::romulan}, {char_key(3, 0x2B), char_type::romulan},
+    {char_key(3, 0x2D), char_type::romulan}, {char_key(3, 0x2E), char_type::romulan},
+    {char_key(3, 0x2F), char_type::romulan}, {char_key(3, 0x31), char_type::romulan},
+    {char_key(2, 0x21), char_type::romulan}, {char_key(2, 0x26), char_type::romulan},
+
+    {char_key(3, 0x05), char_type::klingon}, {char_key(3, 0x06), char_type::klingon},
+    {char_key(3, 0x07), char_type::klingon}, {char_key(3, 0x08), char_type::klingon},
+    {char_key(3, 0x09), char_type::klingon}, {char_key(3, 0x0A), char_type::klingon},
+    {char_key(3, 0x0B), char_type::klingon}, {char_key(3, 0x0C), char_type::klingon},
+    {char_key(3, 0x0D), char_type::klingon}, {char_key(3, 0x0E), char_type::klingon},
+    {char_key(3, 0x0F), char_type::klingon}, {char_key(3, 0x10), char_type::klingon},
+    {char_key(3, 0x01), char_type::klingon}, {char_key(3, 0x02), char_type::klingon},
+    {char_key(3, 0x03), char_type::klingon}, {char_key(3, 0x04), char_type::klingon},
+    {char_key(2, 0x1C), char_type::klingon}, {char_key(2, 0x35), char_type::klingon},
+
+    {char_key(2, 0x05), char_type::federation}, {char_key(2, 0x06), char_type::federation},
+    {char_key(2, 0x07), char_type::federation}, {char_key(2, 0x08), char_type::federation},
+    {char_key(2, 0x09), char_type::federation}, {char_key(2, 0x0A), char_type::federation},
+    {char_key(2, 0x0B), char_type::federation}, {char_key(2, 0x0C), char_type::federation},
+    {char_key(2, 0x0D), char_type::federation}, {char_key(2, 0x0E), char_type::federation},
+    {char_key(2, 0x0F), char_type::federation}, {char_key(2, 0x10), char_type::federation},
+    {char_key(2, 0x01), char_type::federation}, {char_key(2, 0x02), char_type::federation},
+    {char_key(2, 0x03), char_type::federation}, {char_key(2, 0x04), char_type::federation},
+    {char_key(3, 0x23), char_type::federation}, {char_key(2, 0x34), char_type::federation},
+
+    {char_key(2, 0x32), char_type::orion}, {char_key(2, 0x33), char_type::orion},
+    {char_key(2, 0x2F), char_type::orion}, {char_key(2, 0x31), char_type::orion},
+    {char_key(2, 0x2D), char_type::orion}, {char_key(2, 0x2E), char_type::orion},
+    {char_key(2, 0x2A), char_type::orion}, {char_key(2, 0x2B), char_type::orion},
+    {char_key(2, 0x27), char_type::orion}, {char_key(2, 0x29), char_type::orion},
+    {char_key(2, 0x3A), char_type::orion}, {char_key(2, 0x12), char_type::orion},
+    {char_key(2, 0x38), char_type::orion}, {char_key(2, 0x39), char_type::orion},
+    {char_key(2, 0x36), char_type::orion}, {char_key(2, 0x37), char_type::orion},
+    {char_key(2, 0x20), char_type::orion}, {char_key(2, 0x30), char_type::orion},
+
+};
+
 void PtermFrame::ptermDrawChar (int x, int y, int snum, int cnum, bool autobs)
 {
     u32 fpix, bpix;
@@ -3505,6 +3572,31 @@ void PtermFrame::ptermDrawChar (int x, int y, int snum, int cnum, bool autobs)
     PixelData pixmap (*m_bitmap);
     PixelData selmap (*m_selmap);
     
+    auto use_fg_color = m_fgpix;
+    auto use_bg_color = m_bgpix;
+    auto used_empire_colors = false;
+    if (!m_profile->m_noColorShips && snum > 1) { // Displaying ships/planets with loaded font
+      // Checking snum above is just an optimization. The lookup would not find the char anyway.
+        auto use_char_type = char_map.find(char_key(snum, cnum));
+        if (use_char_type != char_map.end()) {
+            used_empire_colors = true;
+            switch (use_char_type->second) {
+                case char_type::romulan:
+                    SetColors(m_profile->m_romulanColor, m_profile->m_shipBackgroundColor);
+                    break;
+                case char_type::klingon:
+                    SetColors(m_profile->m_klingonColor, m_profile->m_shipBackgroundColor);
+                    break;
+                case char_type::federation:
+                    SetColors(m_profile->m_federationColor, m_profile->m_shipBackgroundColor);
+                    break;
+                case char_type::orion:
+                    SetColors(m_profile->m_orionColor, m_profile->m_shipBackgroundColor);
+                    break;
+            }
+        }
+    }
+
     // Drawing a character is done simply by drawing the dots one by one.
     if (snum == 0)
     {
@@ -3550,6 +3642,12 @@ void PtermFrame::ptermDrawChar (int x, int y, int snum, int cnum, bool autobs)
     ptermDrawCharInto (x, y, charp, fpix, bpix, mode, modexor, pixmap);
     ptermDrawCharInto (x & 0770, y & 0760, svcharp, m_selpixf, m_selpixb,
                        (autobs ? 3 : 1), false, selmap);
+
+    // Restore colors if they were overridden.
+    if (used_empire_colors) {
+        m_fgpix = use_fg_color;
+        m_bgpix = use_bg_color;
+    }
 }
 
 void PtermFrame::ptermDrawCharInto (int x, int y, const u16 *charp,

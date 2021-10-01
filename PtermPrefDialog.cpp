@@ -104,6 +104,8 @@ void PtermPrefDialog::PtermInitDialog (void)
     wxStaticText* lblMTUTOR;
     wxStaticText* lblFloppy0;
     wxStaticText* lblFloppy1;
+    //tab7
+    wxScrolledWindow* tab7;
 
     wxFont dfont = wxFont (10, wxFONTFAMILY_SWISS, wxFONTSTYLE_NORMAL,
                            wxFONTWEIGHT_NORMAL);
@@ -674,6 +676,120 @@ void PtermPrefDialog::PtermInitDialog (void)
     page6->Fit (tab6);
     tabPrefsDialog->AddPage (tab6, _("Local"), false);
 
+    //tab7
+    tab7 = new wxScrolledWindow (tabPrefsDialog, wxID_ANY,
+                                 wxDefaultPosition, wxDefaultSize,
+                                 wxHSCROLL | wxTAB_TRAVERSAL | wxVSCROLL);
+    tab7->SetScrollRate (5, 5);
+
+    wxFlexGridSizer* page7;
+    page7 = new wxFlexGridSizer (3, 1, 0, 0);
+    page7->AddGrowableCol (0);
+    page7->AddGrowableRow (1);
+    page7->SetFlexibleDirection (wxVERTICAL);
+    lblExplain4 = new wxStaticText (tab7, wxID_ANY,
+                                    _("Change color of ships when playing Empire."),
+                                    wxDefaultPosition, wxDefaultSize, 0);
+    page7->Add (lblExplain4, 0, wxALL, 5);
+
+    wxBoxSizer* bs71;
+    bs71 = new wxBoxSizer (wxVERTICAL);
+    chkDisableShipColor = new wxCheckBox (tab7, wxID_ANY,
+                                      _("Disable colorizing ships."),
+                                      wxDefaultPosition, wxDefaultSize, 0);
+    bs71->Add (chkDisableShipColor, 0, wxALL, 5);
+
+    wxFlexGridSizer* fgs711;
+    fgs711 = new wxFlexGridSizer (5, 2, 0, 0);
+#if defined (_WIN32)
+    btnRomulanColor = new wxButton (tab7, wxID_ANY, wxT (""),
+                               wxDefaultPosition, wxSize (25, -1), 0);
+    btnRomulanColor->SetBackgroundColour (wxColour (255, 128, 0));
+    fgs711->Add (btnRomulanColor, 0, wxALL, 5);
+    auto* lblRomulanColor = new wxStaticText (tab7, wxID_ANY, _("Romulan"),
+                                   wxDefaultPosition, wxDefaultSize, 0);
+    fgs711->Add (lblRomulanColor, 1, wxALL | wxALIGN_CENTER_VERTICAL, 5);
+
+    btnKlingonColor = new wxButton (tab7, wxID_ANY, wxT (""),
+                               wxDefaultPosition, wxSize (25, -1), 0);
+    btnKlingonColor->SetBackgroundColour (wxColour (255, 128, 0));
+    fgs711->Add (btnKlingonColor, 0, wxALL, 5);
+    auto* lblKlingonColor = new wxStaticText (tab7, wxID_ANY, _("Klingon"),
+                                   wxDefaultPosition, wxDefaultSize, 0);
+    fgs711->Add (lblKlingonColor, 1, wxALL | wxALIGN_CENTER_VERTICAL, 5);
+
+    btnFederationColor = new wxButton (tab7, wxID_ANY, wxT (""),
+                               wxDefaultPosition, wxSize (25, -1), 0);
+    btnFederationColor->SetBackgroundColour (wxColour (255, 128, 0));
+    fgs711->Add (btnFederationColor, 0, wxALL, 5);
+    auto* lblFederationColor = new wxStaticText (tab7, wxID_ANY, _("Federation"),
+                                   wxDefaultPosition, wxDefaultSize, 0);
+    fgs711->Add (lblFederationColor, 1, wxALL | wxALIGN_CENTER_VERTICAL, 5);
+
+    btnOrionColor = new wxButton (tab7, wxID_ANY, wxT (""),
+                               wxDefaultPosition, wxSize (25, -1), 0);
+    btnOrionColor->SetBackgroundColour (wxColour (255, 128, 0));
+    fgs711->Add (btnOrionColor, 0, wxALL, 5);
+    auto* lblOrionColor = new wxStaticText (tab7, wxID_ANY, _("Orion"),
+                                   wxDefaultPosition, wxDefaultSize, 0);
+    fgs711->Add (lblOrionColor, 1, wxALL | wxALIGN_CENTER_VERTICAL, 5);
+
+    btnBgShipColor = new wxButton (tab7, wxID_ANY, wxT (""),
+                               wxDefaultPosition, wxSize (25, -1), 0);
+    btnBgShipColor->SetBackgroundColour (wxColour (255, 128, 0));
+    fgs711->Add (btnBgShipColor, 0, wxALL, 5);
+    auto* lblShipBGColor = new wxStaticText (tab7, wxID_ANY, _("Ship Background Color"),
+                                   wxDefaultPosition, wxDefaultSize, 0);
+    fgs711->Add (lblShipBGColor, 1, wxALL | wxALIGN_CENTER_VERTICAL, 5);
+#else
+    btnRomulanColor = new wxBitmapButton (tab7, wxID_ANY, wxNullBitmap,
+                                     wxDefaultPosition, wxDefaultSize,
+                                     wxBU_AUTODRAW);
+    fgs711->Add (btnRomulanColor, 0, wxALL, 5);
+    lblRomulanColor = new wxStaticText (tab7, wxID_ANY, _("Romulan color"),
+                                   wxDefaultPosition, wxDefaultSize, 0);
+    fgs711->Add (lblRomulanColor, 1, wxALL | wxALIGN_CENTER_VERTICAL, 5);
+    btnKlingonColor = new wxBitmapButton (tab7, wxID_ANY, wxNullBitmap,
+                                     wxDefaultPosition, wxDefaultSize,
+                                     wxBU_AUTODRAW);
+    fgs711->Add (btnKlingonColor, 0, wxALL, 5);
+    lblKlingonColor = new wxStaticText (tab7, wxID_ANY, _("Klingon color"),
+                                   wxDefaultPosition, wxDefaultSize, 0);
+    fgs711->Add (lblKlingonColor, 1, wxALL | wxALIGN_CENTER_VERTICAL, 5);
+    btnFederationColor = new wxBitmapButton (tab7, wxID_ANY, wxNullBitmap,
+                                     wxDefaultPosition, wxDefaultSize,
+                                     wxBU_AUTODRAW);
+    fgs711->Add (btnFederationColor, 0, wxALL, 5);
+    lblFederationColor = new wxStaticText (tab7, wxID_ANY, _("Federation color"),
+                                   wxDefaultPosition, wxDefaultSize, 0);
+    fgs711->Add (lblFederationColor, 1, wxALL | wxALIGN_CENTER_VERTICAL, 5);
+    btnOrionColor = new wxBitmapButton (tab7, wxID_ANY, wxNullBitmap,
+                                     wxDefaultPosition, wxDefaultSize,
+                                     wxBU_AUTODRAW);
+    fgs711->Add (btnOrionColor, 0, wxALL, 5);
+    lblOrionColor = new wxStaticText (tab7, wxID_ANY, _("Orion color"),
+                                   wxDefaultPosition, wxDefaultSize, 0);
+    fgs711->Add (lblOrionColor, 1, wxALL | wxALIGN_CENTER_VERTICAL, 5);
+    btnShipBGColor = new wxBitmapButton (tab7, wxID_ANY, wxNullBitmap,
+                                     wxDefaultPosition, wxDefaultSize,
+                                     wxBU_AUTODRAW);
+    fgs711->Add (btnShipBGColor, 0, wxALL, 5);
+    lblShipBGColor = new wxStaticText (tab7, wxID_ANY, _("ShipBG color"),
+                                   wxDefaultPosition, wxDefaultSize, 0);
+    fgs711->Add (lblShipBGColor, 1, wxALL | wxALIGN_CENTER_VERTICAL, 5);
+#endif
+    bs71->Add (fgs711, 1, 0, 5);
+    page7->Add (bs71, 1, wxEXPAND | wxALIGN_TOP, 5);
+    lblExplainColor = new wxStaticText (tab7, wxID_ANY, 
+                                        _("Yo"),
+                                        wxDefaultPosition, wxDefaultSize, 0);
+    page7->Add (lblExplainColor, 0, wxALL | wxALIGN_BOTTOM, 5);
+    tab7->SetSizer (page7);
+    tab7->Layout ();
+    page7->Fit (tab7);
+    tabPrefsDialog->AddPage (tab7, _("Empire"), false);
+
+
     //notebook
     bSizer1->Add (tabPrefsDialog, 1, wxEXPAND | wxTOP | wxRIGHT | wxLEFT, 6);
 
@@ -790,6 +906,11 @@ void PtermPrefDialog::SetControlState (void)
 #if !defined (_WIN32)
     wxBitmap fgBitmap (15, 15);
     wxBitmap bgBitmap (15, 15);
+    wxBitmap romulanBitmap (15, 15);
+    wxBitmap klingonBitmap (15, 15);
+    wxBitmap federationBitmap (15, 15);
+    wxBitmap orionBitmap (15, 15);
+    wxBitmap bgshipBitmap (15, 15);
 #endif
     if (m_profileEdit)
     {
@@ -861,6 +982,39 @@ void PtermPrefDialog::SetControlState (void)
     chkFloppy1->SetValue(m_profile->m_floppy1);
     txtFloppy0->SetLabel(m_profile->m_floppy0File);
     txtFloppy1->SetLabel(m_profile->m_floppy1File);
+
+    //tab7
+    chkDisableShipColor->SetValue (m_profile->m_noColorShips);
+#if defined (_WIN32)
+    btnRomulanColor->SetBackgroundColour (m_profile->m_romulanColor);
+#else
+    paintBitmap (romulanBitmap, m_profile->m_romulanColor);
+    btnRomulanColor->SetBitmapLabel (romulanBitmap);
+#endif
+#if defined (_WIN32)
+    btnKlingonColor->SetBackgroundColour (m_profile->m_klingonColor);
+#else
+    paintBitmap (klingonBitmap, m_profile->m_klingonColor);
+    btnKlingonColor->SetBitmapLabel (klingonBitmap);
+#endif
+#if defined (_WIN32)
+    btnFederationColor->SetBackgroundColour (m_profile->m_federationColor);
+#else
+    paintBitmap (federationBitmap, m_profile->m_federationColor);
+    btnFederationColor->SetBitmapLabel (federationBitmap);
+#endif
+#if defined (_WIN32)
+    btnOrionColor->SetBackgroundColour (m_profile->m_orionColor);
+#else
+    paintBitmap (orionBitmap, m_profile->m_orionColor);
+    btnOrionColor->SetBitmapLabel (orionBitmap);
+#endif
+#if defined (_WIN32)
+    btnBgShipColor->SetBackgroundColour (m_profile->m_shipBackgroundColor);
+#else
+    paintBitmap (bgshipBitmap, m_profile->m_shipBackgroundColor);
+    btnOrionColor->SetBitmapLabel (bgshipBitmap);
+#endif
 }
 
 void PtermPrefDialog::OnButton (wxCommandEvent& event)
@@ -1052,6 +1206,61 @@ void PtermPrefDialog::OnButton (wxCommandEvent& event)
 #endif
         Modified();
     }
+    else if (event.GetEventObject () == btnRomulanColor)
+    {
+        m_profile->m_romulanColor = PtermApp::SelectColor (*this, _("Romulan"), m_profile->m_romulanColor);
+#if defined (_WIN32)
+        btnRomulanColor->SetBackgroundColour (m_profile->m_romulanColor);
+#else
+        paintBitmap (romulanBitmap, m_profile->m_romulanColor);
+        btnRomulanColor->SetBitmapLabel (romulanBitmap);
+#endif
+        Modified();
+    }
+    else if (event.GetEventObject () == btnKlingonColor)
+    {
+        m_profile->m_klingonColor = PtermApp::SelectColor (*this, _("Klingon"), m_profile->m_klingonColor);
+#if defined (_WIN32)
+        btnKlingonColor->SetBackgroundColour (m_profile->m_klingonColor);
+#else
+        paintBitmap (klingonBitmap, m_profile->m_klingonColor);
+        btnKlingonColor->SetBitmapLabel (klingonBitmap);
+#endif
+        Modified();
+    }
+    else if (event.GetEventObject () == btnFederationColor)
+    {
+        m_profile->m_federationColor = PtermApp::SelectColor (*this, _("Federation"), m_profile->m_federationColor);
+#if defined (_WIN32)
+        btnFederationColor->SetBackgroundColour (m_profile->m_federationColor);
+#else
+        paintBitmap (federationBitmap, m_profile->m_federationColor);
+        btnFederationColor->SetBitmapLabel (federationBitmap);
+#endif
+        Modified();
+    }
+    else if (event.GetEventObject () == btnOrionColor)
+    {
+        m_profile->m_orionColor = PtermApp::SelectColor (*this, _("Orion"), m_profile->m_orionColor);
+#if defined (_WIN32)
+        btnOrionColor->SetBackgroundColour (m_profile->m_orionColor);
+#else
+        paintBitmap (orionBitmap, m_profile->m_orionColor);
+        btnOrionColor->SetBitmapLabel (orionBitmap);
+#endif
+        Modified();
+    }
+    else if (event.GetEventObject () == btnBgShipColor)
+    {
+        m_profile->m_shipBackgroundColor = PtermApp::SelectColor (*this, _("Ship Background"), m_profile->m_shipBackgroundColor);
+#if defined (_WIN32)
+        btnBgShipColor->SetBackgroundColour (m_profile->m_shipBackgroundColor);
+#else
+        paintBitmap (bgshipBitmap, m_profile->m_shipBackgroundColor);
+        btnBgShipColor->SetBitmapLabel (bgshipBitmap);
+#endif
+        Modified();
+    }
     else if (event.GetEventObject () == btnCancel)
     {
         ptermApp->m_prefDialog = NULL;
@@ -1183,6 +1392,11 @@ void PtermPrefDialog::OnCheckbox (wxCommandEvent& event)
     {
         m_profile->m_floppy1 = event.IsChecked();
         m_floppy1Changed = true;
+    }
+    //tab7
+    else if (event.GetEventObject () == chkDisableShipColor)
+    {
+        m_profile->m_noColorShips = event.IsChecked ();
     }
     else
         return;

@@ -160,6 +160,14 @@
 #define PREF_FLOPPY0NAM  "FLOPPY0NAM"
 #define PREF_FLOPPY1NAM  "FLOPPY1NAM"
 
+//tab7
+#define PREF_NOCOLORSHIPS    "no-color-ships"
+#define PREF_ROMULANCOLOR    "color-romulan"
+#define PREF_KLINGONCOLOR    "color-klingon"
+#define PREF_FEDERATIONCOLOR "color-federation"
+#define PREF_ORIONCOLOR      "color-orion"
+#define PREF_BGSHIPCOLOR     "background-ship"
+
 /*
 **  -----------------------
 **  Private Macro Functions

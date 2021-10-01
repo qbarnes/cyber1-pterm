@@ -274,9 +274,42 @@ bool PtermProfile::LoadProfile (void)
             else if (token.Cmp(wxT(PREF_FLOPPY1NAM)) == 0)
                 m_floppy1File = value;
 
-
             else if (token.Cmp (wxT (PREF_LOCKPOSITION)) == 0)
                 m_lockPosition = (value.Cmp (wxT ("1")) == 0);
+
+            //tab7
+            else if (token.Cmp (wxT (PREF_NOCOLORSHIPS)) == 0)
+                m_noColorShips  = (value.Cmp (wxT("1")) == 0);
+            else if (token.Cmp (wxT (PREF_ROMULANCOLOR)) == 0)
+            {
+                s = value.c_str ();
+                sscanf (s, "%d %d %d", &r, &g, &b);
+                m_romulanColor  = wxColour (r, g, b);
+            }
+            else if (token.Cmp (wxT (PREF_KLINGONCOLOR)) == 0)
+            {
+                s = value.c_str ();
+                sscanf (s, "%d %d %d", &r, &g, &b);
+                m_klingonColor  = wxColour (r, g, b);
+            }
+            else if (token.Cmp (wxT (PREF_FEDERATIONCOLOR)) == 0)
+            {
+                s = value.c_str ();
+                sscanf (s, "%d %d %d", &r, &g, &b);
+                m_federationColor = wxColour (r, g, b);
+            }
+            else if (token.Cmp (wxT (PREF_ORIONCOLOR)) == 0)
+            {
+                s = value.c_str ();
+                sscanf (s, "%d %d %d", &r, &g, &b);
+                m_orionColor    = wxColour (r, g, b);
+            }
+            else if (token.Cmp (wxT (PREF_BGSHIPCOLOR)) == 0)
+            {
+                s = value.c_str ();
+                sscanf (s, "%d %d %d", &r, &g, &b);
+                m_shipBackgroundColor = wxColour (r, g, b);
+            }
 
         }
         if (file.Eof ())
@@ -406,6 +439,19 @@ bool PtermProfile::SaveProfile (void)
     file.AddLine(buffer);
     buffer.Printf(wxT(PREF_FLOPPY1NAM) wxT("=%s"), m_floppy1File);
     file.AddLine(buffer);
+    //tab7
+    buffer.Printf (wxT (PREF_NOCOLORSHIPS) wxT ("=%d"), (m_noColorShips) ? 1 : 0);
+    file.AddLine (buffer);
+    buffer.Printf (wxT (PREF_ROMULANCOLOR) wxT ("=%d %d %d"), m_romulanColor.Red (), m_romulanColor.Green (), m_romulanColor.Blue ());
+    file.AddLine (buffer);
+    buffer.Printf (wxT (PREF_KLINGONCOLOR) wxT ("=%d %d %d"), m_klingonColor.Red (), m_klingonColor.Green (), m_klingonColor.Blue ());
+    file.AddLine (buffer);
+    buffer.Printf (wxT (PREF_FEDERATIONCOLOR) wxT ("=%d %d %d"), m_federationColor.Red (), m_federationColor.Green (), m_federationColor.Blue ());
+    file.AddLine (buffer);
+    buffer.Printf (wxT (PREF_ORIONCOLOR) wxT ("=%d %d %d"), m_orionColor.Red (), m_orionColor.Green (), m_orionColor.Blue ());
+    file.AddLine (buffer);
+    buffer.Printf (wxT (PREF_BGSHIPCOLOR) wxT ("=%d %d %d"), m_shipBackgroundColor.Red (), m_shipBackgroundColor.Green (), m_shipBackgroundColor.Blue ());
+    file.AddLine (buffer);
 
     //write to disk
     file.Write ();

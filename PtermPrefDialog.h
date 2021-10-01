@@ -120,6 +120,21 @@ public:
     wxStaticText *txtFloppy1;
     wxButton *btnFloppy0;
     wxButton *btnFloppy1;
+    //tab7
+    wxCheckBox *chkDisableShipColor;
+#if defined (_WIN32)
+    wxButton* btnRomulanColor;
+    wxButton* btnKlingonColor;
+    wxButton* btnFederationColor;
+    wxButton* btnOrionColor;
+    wxButton* btnBgShipColor;
+#else
+    wxBitmapButton* btnRomulanColor;
+    wxBitmapButton* btnKlingonColor;
+    wxBitmapButton* btnFederationColor;
+    wxBitmapButton* btnOrionColor;
+    wxBitmapButton* btnBgShipColor;
+#endif
 
     //button bar
     wxButton *btnHelp;

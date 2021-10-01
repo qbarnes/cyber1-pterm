@@ -87,6 +87,13 @@ public:
     bool        m_floppy1;
     wxString    m_floppy0File;
     wxString    m_floppy1File;
+    //tab7
+    bool        m_noColorShips;
+    wxColour    m_romulanColor;
+    wxColour    m_klingonColor;
+    wxColour    m_federationColor;
+    wxColour    m_orionColor;
+    wxColour    m_shipBackgroundColor;
 
     // Methods
     PtermProfile ();
