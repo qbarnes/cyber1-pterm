@@ -865,10 +865,14 @@ int dtSend (NetFet *fet, const void *buf, int len)
     ** Update the IN pointer, then wake the send thread.
     */
     fet->sendin = in;
+#if defined(__APPLE__)
     if (ssemp (fet) != NULL)
     {
         sem_post (ssemp (fet));
     }
+#else
+    sem_post (ssemp (fet));
+#endif
     
     if (dtSendFree (fet) == 0)
         {
